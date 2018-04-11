@@ -1,8 +1,8 @@
-package SortingAlgorithms;
+package sorting_algos;
 
 public class BubbleSort {
 
-    public void bubbleSort(int[] array){
+    public static void bubbleSort(int[] array){
         long start = System.nanoTime();
         int n = array.length;
         for(int i = 0; i < n; i++)

@@ -1,4 +1,4 @@
-package SortingAlgorithms;
+package sorting_algos;
 
 import java.util.Arrays;
 
@@ -14,7 +14,6 @@ public class SortingController {
         useSelectionSort(array);
 
     }
-
     public static int[] generateRandomIntArray(int size){
         int[] array = new int[size];
         for (int i = 0; i < size-1; i++)
@@ -22,7 +21,6 @@ public class SortingController {
 
         return array;
     }
-
     public static void useMergeSort(int[] array){
         System.out.println("Merge Sort:");
         MergeSort mergeSort = new MergeSort();
@@ -30,7 +28,6 @@ public class SortingController {
         if(printArrays) System.out.println("Sorted array:   " + Arrays.toString(array));
         System.out.println("----------------------------------------------------");
     }
-
     public static void useBubbleSort(int[] array){
         System.out.println("Bubble Sort:");
         BubbleSort bubbleSort = new BubbleSort();
@@ -38,7 +35,6 @@ public class SortingController {
         if(printArrays) System.out.println("Sorted array:   " + Arrays.toString(array));
         System.out.println("----------------------------------------------------");
     }
-
     public static void useExchangeSort(int[] array){
         System.out.println("Exchange Sort:");
         ExchangeSort exchangeSort = new ExchangeSort();
@@ -46,7 +42,6 @@ public class SortingController {
         if(printArrays) System.out.println("Sorted array:   " + Arrays.toString(array));
         System.out.println("----------------------------------------------------");
     }
-
     public static void useInsertionSort(int[] array){
         System.out.println("Insertion Sort:");
         InsertionSort insertionSort = new InsertionSort();

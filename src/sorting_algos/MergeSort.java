@@ -1,16 +1,16 @@
-package SortingAlgorithms;
+package sorting_algos;
 
 
 public class MergeSort{
 
-    public void mergeSort(int[] array){
+    public static void mergeSort(int[] array){
         long start = System.nanoTime();
         mergeSort(array, new int[array.length], 0, array.length-1);
         long end = System.nanoTime();
         System.out.println("Merge Sort completed in " + (end - start) + "ns.");
     }
 
-    public  void mergeSort(int[] array, int[] tempArray, int leftStart, int rightEnd){
+    public static void mergeSort(int[] array, int[] tempArray, int leftStart, int rightEnd){
         if(leftStart >= rightEnd) return ;
         int middle = (leftStart + rightEnd)/2; //Find the middle point
         mergeSort(array, tempArray, leftStart, middle); //MergeSort the left side
@@ -18,7 +18,7 @@ public class MergeSort{
         mergeHalves(array, tempArray,leftStart, rightEnd); //Merge both halves
     }
 
-    private void mergeHalves(int[] array, int[] temp, int leftStart, int rightEnd) {
+    private static void mergeHalves(int[] array, int[] temp, int leftStart, int rightEnd) {
         int leftEnd = (leftStart + rightEnd) / 2;
         int rightStart = leftEnd + 1;
         int size = rightEnd - leftStart + 1;

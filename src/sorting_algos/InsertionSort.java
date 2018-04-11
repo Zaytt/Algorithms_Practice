@@ -1,9 +1,9 @@
-package SortingAlgorithms;
+package sorting_algos;
 
 
 public class InsertionSort {
 
-    public void insertionSort(int[] array){
+    public static void insertionSort(int[] array){
         long start = System.nanoTime();
         int n = array.length;
         for (int i = 1; i < n; i++){

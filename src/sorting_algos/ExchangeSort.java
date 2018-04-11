@@ -1,10 +1,8 @@
-package SortingAlgorithms;
-
-import java.util.Arrays;
+package sorting_algos;
 
 public class ExchangeSort {
 
-    public void exchangeSort(int[] array){
+    public static void exchangeSort(int[] array){
         long start = System.nanoTime();
         int n = array.length;
         for(int i = 0; i < n-1; i++) {

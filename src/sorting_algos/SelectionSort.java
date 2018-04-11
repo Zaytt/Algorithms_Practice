@@ -1,8 +1,8 @@
-package SortingAlgorithms;
+package sorting_algos;
 
 public class SelectionSort {
 
-    public void selectionSort(int[] array){
+    public static void selectionSort(int[] array){
         long start = System.nanoTime();
         for (int i = 0; i < array.length; i++)
             for (int j = i+1; j < array.length-i-1; j++){
