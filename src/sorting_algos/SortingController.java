@@ -3,15 +3,17 @@ package sorting_algos;
 import java.util.Arrays;
 
 public class SortingController {
-    static boolean printArrays = false; //Change in order to print arrays into console. Not recommended with huge arrays.
-     public static void main(String[] args) {
-        int[] array = generateRandomIntArray(100000);
+
+    //Change in order to print arrays into console. Not recommended with huge arrays.
+    static boolean printArrays = false;
+    public static void main(String[] args) {
+        int[] array = generateRandomIntArray(5000);
         if(printArrays) System.out.println("Unsorted array: " + Arrays.toString(array));
-        useMergeSort(array);
-        useInsertionSort(array);
-        useExchangeSort(array);
-        useBubbleSort(array);
-        useSelectionSort(array);
+        useBubbleSort(array.clone());
+        useMergeSort(array.clone());
+        useInsertionSort(array.clone());
+        useExchangeSort(array.clone());
+        useSelectionSort(array.clone());
 
     }
     public static int[] generateRandomIntArray(int size){
@@ -51,8 +53,8 @@ public class SortingController {
     }
     public static void useSelectionSort(int[] array){
         System.out.println("Selection Sort:");
-        InsertionSort insertionSort = new InsertionSort();
-        insertionSort.insertionSort(array);
+        SelectionSort selectionSort = new SelectionSort();
+        SelectionSort.selectionSort(array);
         if(printArrays) System.out.println("Sorted array:   " + Arrays.toString(array));
         System.out.println("----------------------------------------------------");
     }
